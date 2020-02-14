@@ -13,6 +13,8 @@
 		A1B59D3723F1F9DF003C43AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3523F1F9DF003C43AC /* Main.storyboard */; };
 		A1B59D3923F1F9E0003C43AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3823F1F9E0003C43AC /* Assets.xcassets */; };
 		A1B59D3C23F1F9E0003C43AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3A23F1F9E0003C43AC /* LaunchScreen.storyboard */; };
+		B0D782C123F3806D00686BD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C023F3806D00686BD0 /* MapViewController.swift */; };
+		B0D782C323F3819200686BD0 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C223F3819200686BD0 /* TrainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A1B59D3823F1F9E0003C43AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B59D3B23F1F9E0003C43AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1B59D3D23F1F9E0003C43AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0D782C023F3806D00686BD0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B0D782C223F3819200686BD0 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				A1B59D3123F1F9DF003C43AC /* SceneDelegate.swift */,
 				A1B59D3323F1F9DF003C43AC /* ViewController.swift */,
 				A1B59D3523F1F9DF003C43AC /* Main.storyboard */,
+				B0D782C223F3819200686BD0 /* TrainViewController.swift */,
+				B0D782C023F3806D00686BD0 /* MapViewController.swift */,
 				A1B59D3823F1F9E0003C43AC /* Assets.xcassets */,
 				A1B59D3A23F1F9E0003C43AC /* LaunchScreen.storyboard */,
 				A1B59D3D23F1F9E0003C43AC /* Info.plist */,
@@ -140,7 +146,9 @@
 			files = (
 				A1B59D3423F1F9DF003C43AC /* ViewController.swift in Sources */,
 				A1B59D3023F1F9DF003C43AC /* AppDelegate.swift in Sources */,
+				B0D782C323F3819200686BD0 /* TrainViewController.swift in Sources */,
 				A1B59D3223F1F9DF003C43AC /* SceneDelegate.swift in Sources */,
+				B0D782C123F3806D00686BD0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
