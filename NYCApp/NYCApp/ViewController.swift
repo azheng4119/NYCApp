@@ -7,25 +7,41 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialBottomNavigation
 
-class ViewController: UIViewController {
+class ViewController: TrainViewBarViewController {
 
     @IBOutlet weak var trainAndBusViewControl: UISegmentedControl!
-    @IBOutlet weak var testlabel: UILabel!
-    
-    @IBOutlet var trainMainView: UIView!
-    
+        
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        toggleMode(trainAndBusViewControl)
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Trains"
+        bottomNavBar.delegate = self
+//        toggleMode(trainAndBusViewControl)
     }
+    
+    func bottomNavigationBar(_ bottomNavigationBar: MDCBottomNavigationBar, didSelect item: UITabBarItem)
+        {
+            print( "did select item \(item.tag)" )
+            let TrainViewController = self.storyboard!.instantiateViewController(withIdentifier: "TrainView") as! TrainViewController
+            self.navigationController!.pushViewController(TrainViewController, animated: true)
+
+            //self.viewControllers?[item.tag].addChildViewController( appBar.headerViewController )
+            //self.selectedViewController = self.viewControllers?[item.tag]
+
+    //      self.viewControllers
+        }
+    
+    
+
     @IBAction func toggleMode(_ sender: UISegmentedControl){
         switch trainAndBusViewControl.selectedSegmentIndex{
         case 0:
             self.navigationItem.title = "Trains"
+            let TrainViewController = self.storyboard!.instantiateViewController(withIdentifier: "TrainView") as! TrainViewController
+            self.navigationController!.pushViewController(TrainViewController, animated: true)
             break
         case 1:
             self.navigationItem.title = "Buses"

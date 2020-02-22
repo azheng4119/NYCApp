@@ -1,0 +1,88 @@
+PODS:
+  - MaterialComponents/AnimationTiming (105.0.0)
+  - MaterialComponents/Availability (105.0.0)
+  - MaterialComponents/BottomNavigation (105.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - "MaterialComponents/BottomNavigation+Theming (105.0.0)":
+    - MaterialComponents/BottomNavigation
+    - MaterialComponents/schemes/Color
+    - MaterialComponents/schemes/Container
+    - MaterialComponents/schemes/Typography
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Elevation (105.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (105.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (105.0.0)
+  - MaterialComponents/private/Application (105.0.0)
+  - MaterialComponents/private/Color (105.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (105.0.0)
+  - MaterialComponents/Ripple (105.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/schemes/Color (105.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+  - MaterialComponents/schemes/Container (105.0.0):
+    - MaterialComponents/schemes/Color
+    - MaterialComponents/schemes/Shape
+    - MaterialComponents/schemes/Typography
+  - MaterialComponents/schemes/Shape (105.0.0):
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/schemes/Typography (105.0.0):
+    - "MaterialComponents/schemes/Typography+BasicFontScheme"
+    - "MaterialComponents/schemes/Typography+Scheming"
+    - MaterialComponents/Typography
+  - "MaterialComponents/schemes/Typography+BasicFontScheme (105.0.0)"
+  - "MaterialComponents/schemes/Typography+Scheming (105.0.0)"
+  - MaterialComponents/ShadowElevations (105.0.0)
+  - MaterialComponents/ShadowLayer (105.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (105.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (105.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Typography (105.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - MaterialComponents/BottomNavigation
+  - "MaterialComponents/BottomNavigation+Theming"
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - MaterialComponents
+    - MDFInternationalization
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  MaterialComponents: 5c7033b735f9b7ec4f32d8a27df6f6c0e3bcc08b
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: b7c0b6f0b2f320acdce865bf098c663931eff4a3
+
+COCOAPODS: 1.8.4
