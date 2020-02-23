@@ -13,19 +13,32 @@ import MaterialComponents.MaterialBottomNavigation
 class TrainViewBarViewController: UIViewController, MDCBottomNavigationBarDelegate {
 
     let bottomNavBar = MDCBottomNavigationBar()
-
+    let home = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+    let train = UITabBarItem(title: "Trains", image: UIImage(systemName: "tram.fill"), tag: 1)
+    let map = UITabBarItem(title: "Maps", image: UIImage(systemName: "map.fill"), tag: 2)
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(bottomNavBar)
         bottomNavBar.titleVisibility = .always
         bottomNavBar.alignment = .centered
-        let tabBarItem1 = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-        let tabBarItem2 = UITabBarItem(title: "Messages", image: UIImage(systemName: "arrow.up.to.line"), tag: 1)
-        let tabBarItem3 = UITabBarItem(title: "Favorites", image: UIImage(named: "Favorite"), tag: 2)
-        bottomNavBar.items = [ tabBarItem1, tabBarItem2, tabBarItem3 ]
-        bottomNavBar.selectedItem = tabBarItem1;
+        bottomNavBar.items = [ home, train, map ]
     }
     
+    func bottomNavigationBar(_ bottomNavigationBar: MDCBottomNavigationBar, didSelect item: UITabBarItem){
+        print( "did select item \(item.tag)" )
+        switch item.tag{
+        case 0:
+            self.navigationController?.popToRootViewController(animated: true)
+        case 1:
+            let TrainViewController = self.storyboard!.instantiateViewController(withIdentifier: "TrainView") as! TrainViewController
+            self.navigationController!.pushViewController(TrainViewController, animated: true)
+        case 2:
+            let MapViewController = self.storyboard!.instantiateViewController(withIdentifier: "MapView") as! MapViewController
+            self.navigationController!.pushViewController(MapViewController, animated: true)
+        default: break
+        }
+    }
     
     func layoutBottomNavBar()
     {

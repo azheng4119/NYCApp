@@ -10,28 +10,39 @@ import UIKit
 import Foundation
 import MaterialComponents.MaterialBottomNavigation
 
-class SingleTrainViewController: TrainViewBarViewController {
-    
+class SingleTrainViewController: TrainViewBarViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var TableView: UITableView!
     var selectedTrain: String  = ""
+    let arr = ["42nd Street","Hunter College","Other Stops"]
 
     override func viewDidLoad() {
       super.viewDidLoad()
         self.navigationItem.title = selectedTrain + " Train"
+        TableView.dataSource = self
+        TableView.delegate = self
         bottomNavBar.delegate = self
-        
+        bottomNavBar.selectedItem = train
+
       // Disable inclusion of safe area in size calculations.
     }
     
-    func bottomNavigationBar(_ bottomNavigationBar: MDCBottomNavigationBar, didSelect item: UITabBarItem)
-        {
-            print( "did select item \(item.tag)" )
-
-            //self.viewControllers?[item.tag].addChildViewController( appBar.headerViewController )
-            //self.selectedViewController = self.viewControllers?[item.tag]
-
-    //      self.viewControllers
-        }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let SingleTrainStationViewController = self.storyboard!.instantiateViewController(withIdentifier: "SingleTrainStationView") as! SingleTrainStationViewController
+        SingleTrainStationViewController.selectedStation = arr[indexPath.row]
+        self.navigationController?.pushViewController(SingleTrainStationViewController, animated: true)
+        TableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath)
+        cell.textLabel!.text = arr[indexPath.row]
+        return cell
+    }
     
     
 

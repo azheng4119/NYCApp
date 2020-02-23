@@ -8,8 +8,9 @@
 
 import UIKit
 import SwiftyJSON
+import MaterialComponents.MaterialBottomNavigation
 
-class TrainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class TrainViewController: TrainViewBarViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var TableView: UITableView!
     
@@ -21,6 +22,8 @@ class TrainViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         TableView.dataSource = self
         TableView.delegate = self
+        bottomNavBar.delegate = self
+        bottomNavBar.selectedItem = train
         request()
         // Do any additional setup after loading the view.
     }
@@ -66,9 +69,8 @@ class TrainViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print("Train: \(arr[indexPath.row])")
         let SingleTrainViewController = self.storyboard!.instantiateViewController(withIdentifier: "SingleTrainView") as! SingleTrainViewController
         SingleTrainViewController.selectedTrain = arr[indexPath.row]
-        self.navigationController!.pushViewController(SingleTrainViewController, animated: true)
+        self.navigationController?.pushViewController(SingleTrainViewController, animated: true)
         TableView.deselectRow(at: indexPath, animated: true)
-        
     }
 
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{

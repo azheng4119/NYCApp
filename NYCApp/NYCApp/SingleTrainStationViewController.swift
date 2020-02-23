@@ -8,14 +8,21 @@
 
 import UIKit
 
-class SingleTrainStationViewController: UIViewController {
+class SingleTrainStationViewController: TrainViewBarViewController {
 
+    var selectedStation : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = selectedStation
+        
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        bottomNavBar.selectedItem = train
+    }
 
     /*
     // MARK: - Navigation

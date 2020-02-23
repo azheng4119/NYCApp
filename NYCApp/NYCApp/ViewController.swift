@@ -22,17 +22,9 @@ class ViewController: TrainViewBarViewController {
 //        toggleMode(trainAndBusViewControl)
     }
     
-    func bottomNavigationBar(_ bottomNavigationBar: MDCBottomNavigationBar, didSelect item: UITabBarItem)
-        {
-            print( "did select item \(item.tag)" )
-            let TrainViewController = self.storyboard!.instantiateViewController(withIdentifier: "TrainView") as! TrainViewController
-            self.navigationController!.pushViewController(TrainViewController, animated: true)
-
-            //self.viewControllers?[item.tag].addChildViewController( appBar.headerViewController )
-            //self.selectedViewController = self.viewControllers?[item.tag]
-
-    //      self.viewControllers
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        bottomNavBar.selectedItem = home
+    }
     
     
 
