@@ -13,6 +13,10 @@
 		A1B59D3723F1F9DF003C43AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3523F1F9DF003C43AC /* Main.storyboard */; };
 		A1B59D3923F1F9E0003C43AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3823F1F9E0003C43AC /* Assets.xcassets */; };
 		A1B59D3C23F1F9E0003C43AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3A23F1F9E0003C43AC /* LaunchScreen.storyboard */; };
+		B011952824048A0C005D8D3C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B011952724048A0C005D8D3C /* NotificationCenter.framework */; };
+		B011952B24048A0C005D8D3C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011952A24048A0C005D8D3C /* TodayViewController.swift */; };
+		B011952E24048A0C005D8D3C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B011952C24048A0C005D8D3C /* MainInterface.storyboard */; };
+		B011953224048A0C005D8D3C /* NYCApp Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B011952624048A0C005D8D3C /* NYCApp Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B0A6FF152401CED600C5E8DA /* TrainViewBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6FF142401CED600C5E8DA /* TrainViewBarViewController.swift */; };
 		B0D782C123F3806D00686BD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C023F3806D00686BD0 /* MapViewController.swift */; };
 		B0D782C323F3819200686BD0 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C223F3819200686BD0 /* TrainViewController.swift */; };
@@ -20,6 +24,30 @@
 		B0D9D97923FDDEC9006F289B /* SingleTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9D97823FDDEC9006F289B /* SingleTrainViewController.swift */; };
 		F0FA285B7D72089F1214DB45 /* Pods_NYCApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BF6B90CB025A43838BB636 /* Pods_NYCApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B011953024048A0C005D8D3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1B59D2423F1F9DF003C43AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B011952524048A0C005D8D3C;
+			remoteInfo = "NYCApp Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B011953324048A0C005D8D3C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B011953224048A0C005D8D3C /* NYCApp Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		32BF6B90CB025A43838BB636 /* Pods_NYCApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +61,11 @@
 		A1B59D3823F1F9E0003C43AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B59D3B23F1F9E0003C43AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1B59D3D23F1F9E0003C43AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B011952624048A0C005D8D3C /* NYCApp Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NYCApp Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B011952724048A0C005D8D3C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B011952A24048A0C005D8D3C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B011952D24048A0C005D8D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B011952F24048A0C005D8D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A6FF142401CED600C5E8DA /* TrainViewBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewBarViewController.swift; sourceTree = "<group>"; };
 		B0D782C023F3806D00686BD0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B0D782C223F3819200686BD0 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +79,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FA285B7D72089F1214DB45 /* Pods_NYCApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B011952324048A0C005D8D3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B011952824048A0C005D8D3C /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				32BF6B90CB025A43838BB636 /* Pods_NYCApp.framework */,
+				B011952724048A0C005D8D3C /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B59D2E23F1F9DF003C43AC /* NYCApp */,
+				B011952924048A0C005D8D3C /* NYCApp Widget */,
 				A1B59D2D23F1F9DF003C43AC /* Products */,
 				6D04742DECAD72C1DAB785B5 /* Pods */,
 				74EE740E31F2573AD9129228 /* Frameworks */,
@@ -83,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B59D2C23F1F9DF003C43AC /* NYCApp.app */,
+				B011952624048A0C005D8D3C /* NYCApp Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +150,16 @@
 			path = NYCApp;
 			sourceTree = "<group>";
 		};
+		B011952924048A0C005D8D3C /* NYCApp Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B011952A24048A0C005D8D3C /* TodayViewController.swift */,
+				B011952C24048A0C005D8D3C /* MainInterface.storyboard */,
+				B011952F24048A0C005D8D3C /* Info.plist */,
+			);
+			path = "NYCApp Widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,15 +172,34 @@
 				A1B59D2923F1F9DF003C43AC /* Frameworks */,
 				A1B59D2A23F1F9DF003C43AC /* Resources */,
 				AAD058BB0202C825A8A57F76 /* [CP] Embed Pods Frameworks */,
+				B011953324048A0C005D8D3C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B011953124048A0C005D8D3C /* PBXTargetDependency */,
 			);
 			name = NYCApp;
 			productName = NYCApp;
 			productReference = A1B59D2C23F1F9DF003C43AC /* NYCApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B011952524048A0C005D8D3C /* NYCApp Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B011953624048A0C005D8D3C /* Build configuration list for PBXNativeTarget "NYCApp Widget" */;
+			buildPhases = (
+				B011952224048A0C005D8D3C /* Sources */,
+				B011952324048A0C005D8D3C /* Frameworks */,
+				B011952424048A0C005D8D3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NYCApp Widget";
+			productName = "NYCApp Widget";
+			productReference = B011952624048A0C005D8D3C /* NYCApp Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -140,6 +213,9 @@
 				TargetAttributes = {
 					A1B59D2B23F1F9DF003C43AC = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					B011952524048A0C005D8D3C = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
@@ -157,6 +233,7 @@
 			projectRoot = "";
 			targets = (
 				A1B59D2B23F1F9DF003C43AC /* NYCApp */,
+				B011952524048A0C005D8D3C /* NYCApp Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -169,6 +246,14 @@
 				A1B59D3C23F1F9E0003C43AC /* LaunchScreen.storyboard in Resources */,
 				A1B59D3923F1F9E0003C43AC /* Assets.xcassets in Resources */,
 				A1B59D3723F1F9DF003C43AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B011952424048A0C005D8D3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B011952E24048A0C005D8D3C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +317,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B011952224048A0C005D8D3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B011952B24048A0C005D8D3C /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B011953124048A0C005D8D3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B011952524048A0C005D8D3C /* NYCApp Widget */;
+			targetProxy = B011953024048A0C005D8D3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A1B59D3523F1F9DF003C43AC /* Main.storyboard */ = {
@@ -249,6 +350,14 @@
 				A1B59D3B23F1F9E0003C43AC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B011952C24048A0C005D8D3C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B011952D24048A0C005D8D3C /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -372,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DD55684E4E2652995DD7CFB /* Pods-NYCApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54LUKQTUFF;
@@ -392,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7CBE2D57B2D51714DD7536E5 /* Pods-NYCApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54LUKQTUFF;
@@ -405,6 +516,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B011953424048A0C005D8D3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54LUKQTUFF;
+				INFOPLIST_FILE = "NYCApp Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyzheng.NYCApp.NYCApp-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B011953524048A0C005D8D3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54LUKQTUFF;
+				INFOPLIST_FILE = "NYCApp Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyzheng.NYCApp.NYCApp-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -425,6 +574,15 @@
 			buildConfigurations = (
 				A1B59D4123F1F9E0003C43AC /* Debug */,
 				A1B59D4223F1F9E0003C43AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B011953624048A0C005D8D3C /* Build configuration list for PBXNativeTarget "NYCApp Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B011953424048A0C005D8D3C /* Debug */,
+				B011953524048A0C005D8D3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
