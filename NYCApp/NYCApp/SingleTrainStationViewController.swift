@@ -1,21 +1,28 @@
 //
-//  MapView.swift
+//  SingleTrainStationViewController.swift
 //  NYCApp
 //
-//  Created by Steven Li on 2/11/20.
+//  Created by Steven Li on 2/19/20.
 //  Copyright © 2020 Andy Zheng. All rights reserved.
 //
 
 import UIKit
 
-class MapView: UIViewController {
+class SingleTrainStationViewController: TrainViewBarViewController {
 
+    var selectedStation : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = selectedStation
+        
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        bottomNavBar.selectedItem = train
+    }
 
     /*
     // MARK: - Navigation

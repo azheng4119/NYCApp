@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,18 @@
 		A1B59D3723F1F9DF003C43AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3523F1F9DF003C43AC /* Main.storyboard */; };
 		A1B59D3923F1F9E0003C43AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3823F1F9E0003C43AC /* Assets.xcassets */; };
 		A1B59D3C23F1F9E0003C43AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B59D3A23F1F9E0003C43AC /* LaunchScreen.storyboard */; };
+		B0A6FF152401CED600C5E8DA /* TrainViewBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6FF142401CED600C5E8DA /* TrainViewBarViewController.swift */; };
+		B0D782C123F3806D00686BD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C023F3806D00686BD0 /* MapViewController.swift */; };
+		B0D782C323F3819200686BD0 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C223F3819200686BD0 /* TrainViewController.swift */; };
+		B0D9D97723FDDD17006F289B /* SingleTrainStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9D97623FDDD17006F289B /* SingleTrainStationViewController.swift */; };
+		B0D9D97923FDDEC9006F289B /* SingleTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9D97823FDDEC9006F289B /* SingleTrainViewController.swift */; };
+		F0FA285B7D72089F1214DB45 /* Pods_NYCApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BF6B90CB025A43838BB636 /* Pods_NYCApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32BF6B90CB025A43838BB636 /* Pods_NYCApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DD55684E4E2652995DD7CFB /* Pods-NYCApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCApp.debug.xcconfig"; path = "Target Support Files/Pods-NYCApp/Pods-NYCApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7CBE2D57B2D51714DD7536E5 /* Pods-NYCApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCApp.release.xcconfig"; path = "Target Support Files/Pods-NYCApp/Pods-NYCApp.release.xcconfig"; sourceTree = "<group>"; };
 		A1B59D2C23F1F9DF003C43AC /* NYCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B59D2F23F1F9DF003C43AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B59D3123F1F9DF003C43AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,11 @@
 		A1B59D3823F1F9E0003C43AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B59D3B23F1F9E0003C43AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1B59D3D23F1F9E0003C43AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A6FF142401CED600C5E8DA /* TrainViewBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewBarViewController.swift; sourceTree = "<group>"; };
+		B0D782C023F3806D00686BD0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B0D782C223F3819200686BD0 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
+		B0D9D97623FDDD17006F289B /* SingleTrainStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTrainStationViewController.swift; sourceTree = "<group>"; };
+		B0D9D97823FDDEC9006F289B /* SingleTrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTrainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FA285B7D72089F1214DB45 /* Pods_NYCApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D04742DECAD72C1DAB785B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DD55684E4E2652995DD7CFB /* Pods-NYCApp.debug.xcconfig */,
+				7CBE2D57B2D51714DD7536E5 /* Pods-NYCApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		74EE740E31F2573AD9129228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32BF6B90CB025A43838BB636 /* Pods_NYCApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A1B59D2323F1F9DF003C43AC = {
 			isa = PBXGroup;
 			children = (
 				A1B59D2E23F1F9DF003C43AC /* NYCApp */,
 				A1B59D2D23F1F9DF003C43AC /* Products */,
+				6D04742DECAD72C1DAB785B5 /* Pods */,
+				74EE740E31F2573AD9129228 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +94,11 @@
 				A1B59D3123F1F9DF003C43AC /* SceneDelegate.swift */,
 				A1B59D3323F1F9DF003C43AC /* ViewController.swift */,
 				A1B59D3523F1F9DF003C43AC /* Main.storyboard */,
+				B0D9D97823FDDEC9006F289B /* SingleTrainViewController.swift */,
+				B0A6FF142401CED600C5E8DA /* TrainViewBarViewController.swift */,
+				B0D9D97623FDDD17006F289B /* SingleTrainStationViewController.swift */,
+				B0D782C223F3819200686BD0 /* TrainViewController.swift */,
+				B0D782C023F3806D00686BD0 /* MapViewController.swift */,
 				A1B59D3823F1F9E0003C43AC /* Assets.xcassets */,
 				A1B59D3A23F1F9E0003C43AC /* LaunchScreen.storyboard */,
 				A1B59D3D23F1F9E0003C43AC /* Info.plist */,
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1B59D4023F1F9E0003C43AC /* Build configuration list for PBXNativeTarget "NYCApp" */;
 			buildPhases = (
+				64470E50062E1E673B60670C /* [CP] Check Pods Manifest.lock */,
 				A1B59D2823F1F9DF003C43AC /* Sources */,
 				A1B59D2923F1F9DF003C43AC /* Frameworks */,
 				A1B59D2A23F1F9DF003C43AC /* Resources */,
+				AAD058BB0202C825A8A57F76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +174,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64470E50062E1E673B60670C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYCApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD058BB0202C825A8A57F76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCApp/Pods-NYCApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCApp/Pods-NYCApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCApp/Pods-NYCApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1B59D2823F1F9DF003C43AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A6FF152401CED600C5E8DA /* TrainViewBarViewController.swift in Sources */,
 				A1B59D3423F1F9DF003C43AC /* ViewController.swift in Sources */,
+				B0D9D97923FDDEC9006F289B /* SingleTrainViewController.swift in Sources */,
 				A1B59D3023F1F9DF003C43AC /* AppDelegate.swift in Sources */,
+				B0D782C323F3819200686BD0 /* TrainViewController.swift in Sources */,
 				A1B59D3223F1F9DF003C43AC /* SceneDelegate.swift in Sources */,
+				B0D9D97723FDDD17006F289B /* SingleTrainStationViewController.swift in Sources */,
+				B0D782C123F3806D00686BD0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +370,7 @@
 		};
 		A1B59D4123F1F9E0003C43AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD55684E4E2652995DD7CFB /* Pods-NYCApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +390,7 @@
 		};
 		A1B59D4223F1F9E0003C43AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBE2D57B2D51714DD7536E5 /* Pods-NYCApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
