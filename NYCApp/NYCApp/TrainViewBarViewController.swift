@@ -29,13 +29,13 @@ class TrainViewBarViewController: UIViewController, MDCBottomNavigationBarDelega
         print( "did select item \(item.tag)" )
         switch item.tag{
         case 0:
-            self.navigationController?.popToRootViewController(animated: true)
+            self.navigationController?.popToRootViewController(animated: false)
         case 1:
             let TrainViewController = self.storyboard!.instantiateViewController(withIdentifier: "TrainView") as! TrainViewController
-            self.navigationController!.pushViewController(TrainViewController, animated: true)
+            self.navigationController!.pushViewController(TrainViewController, animated: false)
         case 2:
             let MapViewController = self.storyboard!.instantiateViewController(withIdentifier: "MapView") as! MapViewController
-            self.navigationController!.pushViewController(MapViewController, animated: true)
+            self.navigationController!.pushViewController(MapViewController, animated: false)
         default: break
         }
     }

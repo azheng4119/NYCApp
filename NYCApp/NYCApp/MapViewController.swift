@@ -30,7 +30,7 @@ class MapViewController: UIViewController {
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate{
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: zoomInMeters, longitudinalMeters: zoomInMeters)
-            mapView.setRegion(region, animated: true)
+            mapView.setRegion(region, animated: false)
         }
     }
     
