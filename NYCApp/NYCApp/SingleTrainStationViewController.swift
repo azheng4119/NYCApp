@@ -14,6 +14,7 @@ class SingleTrainStationViewController: TrainViewBarViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bottomNavBar.delegate = self
         self.navigationItem.title = selectedStation
         
 
