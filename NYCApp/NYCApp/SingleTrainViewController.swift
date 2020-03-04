@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 import Foundation
 import MaterialComponents.MaterialBottomNavigation
 
@@ -14,8 +15,7 @@ class SingleTrainViewController: TrainViewBarViewController, UITableViewDelegate
 
     @IBOutlet weak var TableView: UITableView!
     var selectedTrain: String  = ""
-    let arr = ["42nd Street","Hunter College","Other Stops"]
-
+    var trainStops = Array<String>()
     override func viewDidLoad() {
       super.viewDidLoad()
         self.navigationItem.title = selectedTrain + " Train"
@@ -23,24 +23,37 @@ class SingleTrainViewController: TrainViewBarViewController, UITableViewDelegate
         TableView.delegate = self
         bottomNavBar.delegate = self
         bottomNavBar.selectedItem = train
-
-      // Disable inclusion of safe area in size calculations.
+        getTrainStops()
+    }
+    
+    func getTrainStops() {
+        if let path = Bundle.main.path(forResource: "Stations", ofType: "json") {
+            do {
+                let fileUrl = URL(fileURLWithPath: path)
+                let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
+                for stop in 1...JSON(data)[selectedTrain].count{
+                    trainStops.append(JSON(data)[selectedTrain]["\(stop)"].stringValue)
+                }
+            } catch {
+                // Handle error here
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let SingleTrainStationViewController = self.storyboard!.instantiateViewController(withIdentifier: "SingleTrainStationView") as! SingleTrainStationViewController
-        SingleTrainStationViewController.selectedStation = arr[indexPath.row]
+        SingleTrainStationViewController.selectedStation = trainStops[indexPath.row]
         self.navigationController?.pushViewController(SingleTrainStationViewController, animated: true)
         TableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        return trainStops.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath)
-        cell.textLabel!.text = arr[indexPath.row]
+        cell.textLabel!.text = trainStops[indexPath.row]
         return cell
     }
     
