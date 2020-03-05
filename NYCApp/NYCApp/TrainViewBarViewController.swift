@@ -36,7 +36,8 @@ class TrainViewBarViewController: UIViewController, MDCBottomNavigationBarDelega
         case 2:
             let MapViewController = self.storyboard!.instantiateViewController(withIdentifier: "MapView") as! MapViewController
             self.navigationController!.pushViewController(MapViewController, animated: false)
-        default: break
+        default:
+            break
         }
     }
     

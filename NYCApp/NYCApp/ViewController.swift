@@ -19,7 +19,8 @@ class ViewController: TrainViewBarViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Trains"
         bottomNavBar.delegate = self
-//        toggleMode(trainAndBusViewControl)
+        let defaults = UserDefaults(suiteName: "group.andyzheng.NYCApp")
+        defaults?.set("It worked!", forKey: "alarmTime")
     }
     
     override func viewWillAppear(_ animated: Bool) {

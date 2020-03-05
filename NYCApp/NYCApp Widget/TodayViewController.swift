@@ -11,8 +11,20 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var myLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults(suiteName: "group.andyzheng.NYCApp")
+
+        // Check for null value before setting
+        if let restoredValue = defaults!.string(forKey: "alarmTime") {
+            myLabel.text = restoredValue
+        }
+        else {
+            myLabel.text = "Cannot find value"
+        }
+
+
         // Do any additional setup after loading the view.
     }
         

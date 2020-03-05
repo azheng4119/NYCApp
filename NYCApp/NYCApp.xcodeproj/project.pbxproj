@@ -19,6 +19,7 @@
 		B011952B24048A0C005D8D3C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011952A24048A0C005D8D3C /* TodayViewController.swift */; };
 		B011952E24048A0C005D8D3C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B011952C24048A0C005D8D3C /* MainInterface.storyboard */; };
 		B011953224048A0C005D8D3C /* NYCApp Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B011952624048A0C005D8D3C /* NYCApp Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B09EB4C9240D59B7006FDC7E /* Stations.json in Resources */ = {isa = PBXBuildFile; fileRef = B09EB4C8240D59B7006FDC7E /* Stations.json */; };
 		B0A6FF152401CED600C5E8DA /* TrainViewBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6FF142401CED600C5E8DA /* TrainViewBarViewController.swift */; };
 		B0D782C123F3806D00686BD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C023F3806D00686BD0 /* MapViewController.swift */; };
 		B0D782C323F3819200686BD0 /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D782C223F3819200686BD0 /* TrainViewController.swift */; };
@@ -70,6 +71,7 @@
 		B011952F24048A0C005D8D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0119539240493AC005D8D3C /* NYCApp Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NYCApp Widget.entitlements"; sourceTree = "<group>"; };
 		B011953A240493B2005D8D3C /* NYCApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NYCApp.entitlements; sourceTree = "<group>"; };
+		B09EB4C8240D59B7006FDC7E /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
 		B0A6FF142401CED600C5E8DA /* TrainViewBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewBarViewController.swift; sourceTree = "<group>"; };
 		B0D782C023F3806D00686BD0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B0D782C223F3819200686BD0 /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		A1B59D2E23F1F9DF003C43AC /* NYCApp */ = {
 			isa = PBXGroup;
 			children = (
+				B09EB4C7240D5968006FDC7E /* JsonAssets */,
 				B011953A240493B2005D8D3C /* NYCApp.entitlements */,
 				A1B59D2F23F1F9DF003C43AC /* AppDelegate.swift */,
 				A1B59D3123F1F9DF003C43AC /* SceneDelegate.swift */,
@@ -170,6 +173,14 @@
 				B011952F24048A0C005D8D3C /* Info.plist */,
 			);
 			path = "NYCApp Widget";
+			sourceTree = "<group>";
+		};
+		B09EB4C7240D5968006FDC7E /* JsonAssets */ = {
+			isa = PBXGroup;
+			children = (
+				B09EB4C8240D59B7006FDC7E /* Stations.json */,
+			);
+			path = JsonAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				A1B59D3C23F1F9E0003C43AC /* LaunchScreen.storyboard in Resources */,
 				A1B59D3923F1F9E0003C43AC /* Assets.xcassets in Resources */,
+				B09EB4C9240D59B7006FDC7E /* Stations.json in Resources */,
 				A1B59D3723F1F9DF003C43AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
